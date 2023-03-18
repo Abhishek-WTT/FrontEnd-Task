@@ -1,0 +1,63 @@
+<div class="user_main_div">
+    <div class="user-info">
+        <mat-card class="example-card">
+            <img mat-card-image src="../../../assets/Abhishek_Singh_SE_Jan21.jpg" alt="Photo of a Shiba Inu"
+                class="profile-image">
+
+            <mat-card-content>
+                <mat-card-title>Abhishek Singh</mat-card-title><br>
+                <span>Software Engineer</span><br>
+                <span><mat-icon>star</mat-icon></span><br>
+                <span>Walkingtree Technology</span>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button><mat-icon> email</mat-icon>Send an Email</button>
+            </mat-card-actions>
+        </mat-card>
+
+    </div>
+    <div class="user_details">
+
+        <mat-toolbar class="content-header">
+            <span>Business Details</span>
+        </mat-toolbar>
+
+        <mat-card style="width: auto; border: 1px solid black;">
+            <mat-toolbar style="height: 42px !important;">
+                <mat-icon>person</mat-icon>
+                <span>Profile</span>
+                <span class="example-spacer"></span>
+                <mat-card-actions>
+                    <button mat-button class="edit-profile" (click)="openDialog()">Edit Profile</button>
+                </mat-card-actions>
+            </mat-toolbar>
+            <mat-card-content class="user_list">
+                <ul>
+                    <li class="name_list">Name:</li>
+                    <li class="detailTitle">{{name}}</li>
+                </ul>
+                <ul>
+                    <li class="name_list">Domain: </li>
+                    <li class="detailTitle">{{domain}}</li>
+                </ul>
+                <ul>
+                    <li class="name_list">Gender: </li>
+                    <li class="detailTitle">{{gender}}</li>
+                </ul>
+                <ul>
+                    <li class="name_list">Date of Birth: </li>
+                    <li class="detailTitle">{{dateOfBirth}}</li>
+                </ul>
+                <ul>
+                    <li class="name_list">Phone Number: </li>
+                    <li class="detailTitle">+91 {{phone}}</li>
+                </ul>
+                <ul>
+                    <li class="name_list">Location: </li>
+                    <li class="detailTitle">{{location}}</li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>

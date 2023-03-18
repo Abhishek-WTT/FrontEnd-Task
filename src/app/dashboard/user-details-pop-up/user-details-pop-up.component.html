@@ -1,0 +1,43 @@
+<form [formGroup]="profileFormData" class="formDetails">
+    <div>
+        <h2>Edit Your Details</h2>
+    </div>
+    <div>
+        <label for="fname">Name: </label>
+        <input class="float-field" type="text" id="fname" name="fname" formControlName="fname">
+    </div>
+
+    <div>
+        <label for="domain">Domain: </label>
+        <input class="float-field" type="text" id="domain" name="domain" formControlName="domain">
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+        <label for="gender">Gender:</label>
+        <div class="gender-div">
+            <input type="radio" name="gender" value="male" formControlName="gender">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" formControlName="gender">
+            <label for="female">Female</label><br>
+        </div>
+    </div>
+
+    <div>
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input id="dateOfBirth" type="date" class="form-control float-field" style="width: 10.4rem;"
+            formControlName="dateOfBirth" />
+    </div>
+    <div>
+        <label for="phone">Phone No.:</label>
+        <input class="float-field" type="tel" id="phone" name="phone" formControlName="phone" matPrefix = "+91">
+    </div>
+
+    <div>
+        <label for="location">Location:</label>
+        <input class="float-field" type="text" id="location" name="location" formControlName="location">
+    </div>
+
+    <div>
+        <button class="submit-button" type="submit" (click)="onSubmit()">Submit</button>
+    </div>
+</form>

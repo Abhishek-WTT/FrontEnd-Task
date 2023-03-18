@@ -1,0 +1,22 @@
+.formDetails {
+    margin: 0 2rem;
+    width: 30vw;
+
+    div {
+        margin: 2rem;
+
+        .float-field {
+            float: right ;
+        }
+    }
+}
+
+.gender-div{
+    display: flex;
+    float: right;
+    margin: 0 !important;
+
+    input{
+        margin: 0 1rem;
+    }
+}

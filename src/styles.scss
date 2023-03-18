@@ -1,1 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.user_main_div {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.mat-card-header {
+    flex-direction: column;
+    align-items: center !important;
+
+}
+
+.user-info {
+    width: 350px;
+}
+
+.user-info .example-card {
+    max-width: 350px;
+    width: 80% !important;
+    padding-top: 45px;
+    margin-left: 3rem;
+
+    mat-card-actions,
+    mat-card-content {
+        text-align: center;
+    }
+
+    mat-card-actions {
+        button {
+            color: red;
+        }
+    }
+}
+
+.name_list {
+    font-weight: bold;
+}
+
+.detailTitle {
+    display: flex;
+    float: left;
+    position: absolute;
+    left: 14rem;
+}
+
+.user_list {
+    margin-left: 20px !important;
+
+    ul {
+        width: 750px;
+        display: flex;
+        margin: 5px;
+    }
+
+    ul li {
+        list-style: none;
+        text-decoration: none;
+        margin: 5px;
+    }
+}
+
+.content-header {
+    width: auto !important;
+    background-color: rgb(176, 203, 122);
+    height: 42px !important;
+}
+
+.edit-profile {
+    border: 1px solid black !important;
+    max-height: 36px !important;
+    margin-top: 0.5rem !important;
+    background-color: red;
+    color: white;
+}
+
+.submit-button {
+    border: 2px solid black !important;
+    padding: 8px 30px;
+    background-color: #377937;
+    color: beige;
+    border-radius: 10px;
+    margin-left: 6rem;
+}
+
+.user_details {
+    width: 750px;
+    height: 350px;
+    border: 1px solid black;
+}

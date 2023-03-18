@@ -1,0 +1,18 @@
+* {
+    margin: 0.5rem;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.example-header-image {
+    background-image: url('../../../assets/Abhishek_Singh_SE_Jan21.jpg');
+    background-size: cover;
+
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px !important;
+    margin: 50px auto;
+}
