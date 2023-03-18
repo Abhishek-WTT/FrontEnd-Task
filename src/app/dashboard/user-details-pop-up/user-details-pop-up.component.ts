@@ -15,16 +15,13 @@ export class UserDetailsPopUpComponent implements OnInit {
   formData: any;
   profileFormData!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, public commonService: CommonService , public dialog: MatDialogRef<UserDetailsPopUpComponent>) { }
+  constructor(private formBuilder: FormBuilder, public commonService: CommonService, public dialog: MatDialogRef<UserDetailsPopUpComponent>) { }
 
   ngOnInit(): void {
     this.formData = this.commonService.formdata;
-    console.log(this.formData, "FF");
-    
     this.profileFormData = this.formBuilder.group({
       dateOfBirth: [''],
-      fname:new FormControl(''),
-      // fname: "John",
+      fname: new FormControl(''),
       domain: new FormControl(''),
       gender: new FormControl(''),
       phone: new FormControl(''),
@@ -32,21 +29,18 @@ export class UserDetailsPopUpComponent implements OnInit {
     })
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     // this.profileFormData.
     this.updateForm(this.formData);
   }
 
-  updateForm(data:any){
+  updateForm(data: any) {
     this.profileFormData.get('dateOfBirth')?.patchValue(this.formatDate(new Date(data?.dateOfBirth)));
     this.profileFormData.get('fname')?.patchValue(data?.fname);
     this.profileFormData.get('domain')?.patchValue(data?.domain);
     this.profileFormData.get('gender')?.patchValue((data?.gender)?.toLowerCase());
-    this.profileFormData.get('phone')?.patchValue(data?.phone);
+    this.profileFormData.get('phone')?.patchValue("+91 " + data?.phone);
     this.profileFormData.get('location')?.patchValue(data?.location);
-    
-    console.log(data , "Sign");
-
   }
 
   formatDate(date: any) {

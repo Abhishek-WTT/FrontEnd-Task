@@ -25,9 +25,9 @@ export class UserProfileComponent implements OnInit {
     this.domain = "www.google.com"
     this.gender = "Male"
     this.dateOfBirth = "05-Feb-1998"
-    this.phone = "8737876738"
+    this.phone = "+91 8737876738"
     this.location = "Agra, Uttar Pradesh"
-    this.commomService.formdata = { "fname": this.name, "domain": this.domain,  "gender": this.gender,  "dateOfBirth": this.dateOfBirth,  "phone": this.phone, "location": this.location }
+    this.commomService.formdata = { "fname": this.name, "domain": this.domain, "gender": this.gender, "dateOfBirth": this.dateOfBirth, "phone": this.phone, "location": this.location }
 
   }
 
@@ -47,10 +47,8 @@ export class UserProfileComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       this.commomService.formdata = result;
       this.updateFormData(result);
-      console.log(result);
     });
 
   }
-
 
 }
